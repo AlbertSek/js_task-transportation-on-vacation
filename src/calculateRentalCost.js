@@ -10,8 +10,13 @@ function calculateRentalCost(days) {
 
   const totalCost = days * DAILY_RATE;
 
-  if (days >= 7) return totalCost - DISCOUNT_7_DAYS;
-  if (days >= 3) return totalCost - DISCOUNT_3_DAYS;
+  if (days >= 7) {
+    return totalCost - DISCOUNT_7_DAYS;
+  }
+
+  if (days >= 3) {
+    return totalCost - DISCOUNT_3_DAYS;
+  }
 
   return totalCost;
 }
